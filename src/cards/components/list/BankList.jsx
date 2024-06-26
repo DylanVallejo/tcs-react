@@ -135,8 +135,8 @@ export const BankList = ({ searchItem = "" }) => {
     };
     
     return (
-        <div>
-            <h1>Lista de items</h1>
+        <div className="bank-list-container">
+            {/* <h1>Lista de items</h1> */}
             {noResults ? 
                 <p>No se encontraron coincidencias para: <b>{searchItem}</b>, mostrando todos los items.</p>
                 :
@@ -160,33 +160,29 @@ export const BankList = ({ searchItem = "" }) => {
                     {isLoading ? 
                         <tr><td colSpan="6">CARGANDO...</td></tr>
                         :
-                        filteredData.map((card, index) => {
-                            // console.log(card)
-                            return(
-                                <tr key={index}>
-                                    <td><img src={card?.logo} alt={card.name} className='cardsImg'/></td>
-                                    <td>{card?.name}</td>
-                                    <td>{card?.description}</td>
-                                    <td>{card?.date_release.slice(0,10)}</td>
-                                    <td>{card?.date_revision.slice(0,10)}</td>
-                                    <td>
-                                        <button onClick={() => handleMenuClick(index)}>...</button>
-                                        {openMenuIndex === index && (
-                                            <div className="menu-contextual">
-                                                <button onClick={() => handleMenuAction("editar", card)}>Editar</button>
-                                                <button onClick={() => handleMenuAction("eliminar", card)}>Eliminar</button>
-                                            </div>
-                                        )}
-                                    </td>
-                                </tr>
-                                
-                            )
-                        })
+                        filteredData.map((card, index) => (
+                            <tr key={index}>
+                                <td><img src={card?.logo} alt={card.name} className='cardsImg'/></td>
+                                <td>{card?.name}</td>
+                                <td>{card?.description}</td>
+                                <td>{card?.date_release.slice(0,10)}</td>
+                                <td>{card?.date_revision.slice(0,10)}</td>
+                                <td>
+                                    <button onClick={() => handleMenuClick(index)}>...</button>
+                                    {openMenuIndex === index && (
+                                        <div className="menu-contextual">
+                                            <button onClick={() => handleMenuAction("editar", card)}>Editar</button>
+                                            <button onClick={() => handleMenuAction("eliminar", card)}>Eliminar</button>
+                                        </div>
+                                    )}
+                                </td>
+                            </tr>
+                        ))
                     }
                 </tbody>
             </table>
             <div>
-                <h4>{data?.length}</h4>
+                <h4> Cantidad: {data?.length}</h4>
                 <select>
                     <option value={data?.length.toString()}>cantidad</option>
                     <option value={(data?.length + 5).toString()}>Siguientes</option>

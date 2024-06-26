@@ -16,7 +16,7 @@ function Banco() {
 
   return (
     <>
-      <h1>Banco pichincha</h1>
+      <img src='https://actoressostenibles.com/wp-content/uploads/2019/08/Logos-6-10-08.png' style={{height: '3rem', display:'flex', justifyContent:'center', margin:'auto' }} />
       <hr/>
       <BrowserRouter>
         <Routes>

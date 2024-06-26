@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {useNavigate} from 'react-router-dom';
+import './searchBar.css'
 export const SearchBar = ( { findItemByName } ) => {
     
     
@@ -20,7 +21,7 @@ export const SearchBar = ( { findItemByName } ) => {
     }
     
     return (
-        <>
+        <div className="search-bar-container">
             <form onSubmit={ ( e ) => onSubmit( e )  }>
                 <input 
                     type="text"
@@ -29,12 +30,11 @@ export const SearchBar = ( { findItemByName } ) => {
                     onChange={  onInputChange }
                 />  
             </form>
-            {/* <button className='cardDetailBtn' onClick={()=>{navigate('details/'+ item._id)}}>Detalles</button> */}
             <button className='add-btn' onClick={()=>{navigate('register')}}>
                 Agregar
             </button>
         
-        </>
+        </div>
         
     )
 }

@@ -1,31 +1,108 @@
-.cardsImg{
-    width: 4rem;
-    height: auto;
+.bank-list-container {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #e0e0e0; /* Borde muy claro */
+    border-radius: 8px;
+    overflow: auto; /* Habilitar scroll si es necesario */
 }
 
-.menu-contextual {
+.bank-list-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Color de texto oscuro */
+}
+
+.bank-list-container p {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #666; /* Color de texto gris */
+}
+
+.bank-list-container button {
+    background-color: #f0f0f0; /* Fondo celeste muy claro */
+    color: #333; /* Color de texto oscuro */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.bank-list-container button:hover {
+    background-color: #e0e0e0; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+.bank-list-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.bank-list-container th, .bank-list-container td {
+    border: 1px solid #e0e0e0; /* Borde muy claro */
+    padding: 8px;
+    text-align: left;
+}
+
+.bank-list-container th {
+    background-color: #f5f5f5; /* Fondo celeste muy claro para encabezados */
+    color: #333; /* Color de texto oscuro */
+}
+
+.bank-list-container .cardsImg {
+    height: 3rem;
+  
+}
+
+.bank-list-container .menu-contextual {
     position: absolute;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 10;
-    padding: 5px 0;
-    min-width: 120px;
+    background-color: #ffffff; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    gap: 2px;
+    z-index: 1;
 }
 
-.menu-contextual button {
+.bank-list-container .menu-contextual button {
     display: block;
     width: 100%;
-    text-align: left;
-    padding: 8px 12px;
-    border: none;
     background: none;
+    border: none;
+    padding: 8px 0;
+    text-align: left;
     cursor: pointer;
-    font-size: 14px;
     color: #333;
-    transition: background-color 0.3s ease;
 }
 
-.menu-contextual button:hover {
-    background-color: #f0f0f0;
+.bank-list-container .menu-contextual button:hover {
+    background-color: #f0f0f0; 
+}
+
+.bank-list-container .menu-contextual button.delete {
+    color: #fff; 
+    background-color: #e53935;
+}
+
+.bank-list-container .menu-contextual button.edit {
+    color: #fff; 
+    background-color: #03a9f4;
+}
+
+.bank-list-container div:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.bank-list-container select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0; 
+    background-color: #ffffff; 
+    cursor: pointer;
+    color: #333; 
 }
