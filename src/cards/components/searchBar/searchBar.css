@@ -12,22 +12,22 @@
 .search-bar-container input {
     width: 25%;
     padding: 10px;
-    border: 1px solid #e0e0e0; /* Borde muy claro */
+    border: 1px solid #e0e0e0; 
     border-radius: 4px;
-    background-color: #ffffff; /* Fondo blanco */
-    color: #333; /* Color de texto oscuro */
+    background-color: #ffffff; 
+    color: #333; 
 }
 
 .search-bar-container button.add-btn {
-    background-color: #ffeb3b; /* Fondo amarillo */
-    color: #333; /* Color de texto oscuro */
+    background-color: #ffeb3b; 
+    color: #333; 
     border: none;
     padding: 10px 16px;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 10px; /* Espacio entre la barra de búsqueda y el botón */
+    margin-left: 10px; 
 }
 
 .search-bar-container button.add-btn:hover {
-    background-color: #fdd835; /* Fondo amarillo más oscuro al pasar el mouse */
+    background-color: #fdd835; 
 }
