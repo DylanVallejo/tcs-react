@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
-
+import {useNavigate} from 'react-router-dom';
 export const SearchBar = ( { findItemByName } ) => {
+    
+    
+    const navigate = useNavigate()
     
     const [inputValue, setInputValue] = useState('')
     
@@ -26,8 +29,8 @@ export const SearchBar = ( { findItemByName } ) => {
                     onChange={  onInputChange }
                 />  
             </form>
-            
-            <button className='add-btn'>
+            {/* <button className='cardDetailBtn' onClick={()=>{navigate('details/'+ item._id)}}>Detalles</button> */}
+            <button className='add-btn' onClick={()=>{navigate('register')}}>
                 Agregar
             </button>
         

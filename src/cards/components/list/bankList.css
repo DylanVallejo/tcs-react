@@ -1,0 +1,31 @@
+.cardsImg{
+    width: 4rem;
+    height: auto;
+}
+
+.menu-contextual {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+    padding: 5px 0;
+    min-width: 120px;
+}
+
+.menu-contextual button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.menu-contextual button:hover {
+    background-color: #f0f0f0;
+}

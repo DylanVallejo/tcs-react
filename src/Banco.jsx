@@ -1,11 +1,10 @@
-// import { useState } from 'react'
 import { useState } from 'react';
 import { BankList } from './cards/components/list/BankList'
 import { SearchBar } from './cards/components/searchBar/SearchBar'
 import { RegisterForm } from './cards/components/register/RegisterForm';
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
+import {Route,Routes,BrowserRouter} from 'react-router-dom';
+import { Main } from './cards/components/main/Main';
+
 
 function Banco() {
   
@@ -19,12 +18,13 @@ function Banco() {
     <>
       <h1>Banco pichincha</h1>
       <hr/>
-      <SearchBar  findItemByName = { (value) => findItem(value) }/>
-      <hr/>
-      <BankList  searchItem = {item} />
-      <hr/>
-      
-      <RegisterForm/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Main/>}/>
+          <Route path='/register' element={<RegisterForm />}/>
+          <Route path='/update/:id' element={<RegisterForm />}/>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
