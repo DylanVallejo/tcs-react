@@ -20,6 +20,11 @@
     color: #666; 
 }
 
+.bank-list-container .cleanFilter-btn{
+    background-color: white;
+    border: 1px solid black;
+}
+
 .bank-list-container button {
     background-color: #f0f0f0; 
     color: #333; 
@@ -58,19 +63,20 @@
 
 .bank-list-container .menu-contextual {
     position: absolute;
+    right: auto;
     background-color: #ffffff; 
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #e0e0e0;
     border-radius: 4px;
-    gap: 2px;
-    z-index: 1;
+    gap: 3px;
+    /* z-index: 1; */
 }
 
 .bank-list-container .menu-contextual button {
-    display: block;
+    display: flex;
     width: 100%;
     background: none;
-    border: none;
+    /* border: 3px solid red; */
     padding: 8px 0;
     text-align: left;
     cursor: pointer;

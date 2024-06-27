@@ -67,71 +67,100 @@ export const RegisterForm = () => {
 
     return (
         <div className="register-form-container">
-            <h1>{card ? 'Editar Producto' : 'Formulario de registro'}</h1>
-            <button className="cancel" onClick={() => navigate('/')}>Cancelar</button>
+            <div className='header'>
+                <h1>{card ? 'Editar Producto' : 'Formulario de Registro'}</h1>
+                <button className="cancel" onClick={() => navigate('/')}>Regresar</button>
+            </div>
             <hr/>
             <form onSubmit={handleSubmit}>
                 <div className='col'>
-                    <input
-                        required
-                        minLength={3}
-                        maxLength={10}
-                        type="text"
-                        placeholder="id"
-                        name="id"
-                        value={id}
-                        onChange={onInputChange}
-                        readOnly={!!card}
-                    />
-                    <input
-                        required
-                        minLength={5}
-                        maxLength={100}
-                        type="text"
-                        placeholder="name"
-                        name="name"
-                        value={name}
-                        onChange={onInputChange}
-                    />
-                    <input
-                        required
-                        minLength={10}
-                        maxLength={200}
-                        type="text"
-                        placeholder="description"
-                        name="description"
-                        value={description}
-                        onChange={onInputChange}
-                    />
+                    <div className='inputContainer'>
+                        <label className='inputLabels'>ID</label>
+                        <input
+                            required
+                            minLength={3}
+                            maxLength={10}
+                            type="text"
+                            placeholder="id"
+                            name="id"
+                            value={id}
+                            onChange={onInputChange}
+                            readOnly={!!card}
+                        />
+                    </div>
+                    
+                    <div className='inputContainer'>
+                        <label className='inputLabels'>Descripción</label>
+                        <input
+                            required
+                            minLength={10}
+                            maxLength={200}
+                            type="text"
+                            placeholder="description"
+                            name="description"
+                            value={description}
+                            onChange={onInputChange}
+                        />
+                    </div>              
+                    
+                    <div className='inputContainer'>
+                        <label className='inputLabels'>Fecha de liberación</label>
+                        <input
+                            required
+                            type="date"
+                            placeholder="date_release"
+                            name="date_release"
+                            value={date_release}
+                            onChange={onInputChange}
+                            min={today}
+                        />
+                    </div>    
+
                 </div>
+                
                 <div className='col'>
-                    <input
-                        type="text"
-                        placeholder="logo"
-                        name="logo"
-                        value={logo}
-                        onChange={onInputChange}
-                    />
-                    <input
-                        required
-                        type="date"
-                        placeholder="date_release"
-                        name="date_release"
-                        value={date_release}
-                        onChange={onInputChange}
-                        min={today}
-                    />
-                    <input
-                        type="date"
-                        placeholder="date_revision"
-                        name="date_revision"
-                        value={date_revision}
-                        readOnly
-                    />
+                    
+                    <div className='inputContainer'>
+                        <label className='inputLabels'>Nombre</label>
+                        <input
+                            required
+                            minLength={5}
+                            maxLength={100}
+                            type="text"
+                            placeholder="name"
+                            name="name"
+                            value={name}
+                            onChange={onInputChange}
+                        />
+                        
+                    </div>
+                    
+                    <div className='inputContainer'>
+                        <label className='inputLabels'>Logo</label>
+                        <input
+                            type="text"
+                            placeholder="logo"
+                            name="logo"
+                            value={logo}
+                            onChange={onInputChange}
+                        />
+                    </div>
+                    
+                    <div className='inputContainer'>
+                        <label className='inputLabels'>Fecha de revisión</label>
+                        <input
+                            type="date"
+                            placeholder="date_revision"
+                            name="date_revision"
+                            value={date_revision}
+                            readOnly
+                        />
+                    </div>
+                    
                 </div>
             </form>
             <div className='buttonCenter'>
-                <button type="button" className="delete" disabled={!!card} onClick={onResetForm}>Borrar</button>
+                <button type="button" className="delete" disabled={!!card} onClick={onResetForm}>Reiniciar</button>
                 <button type="submit" disabled={!isValid}>{card ? 'Actualizar' : 'Registrar'}</button>
             </div>
         </div>

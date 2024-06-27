@@ -7,10 +7,31 @@
     border-radius: 8px;
     overflow: auto; 
 }
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    
+}
+
+.register-form-container .header .cancel {
+    background: var(--darkGrayishBlue400);
+    border: 1px solid black;
+    transition: all .5s ease-in-out;
+}
+
+.register-form-container .header .cancel:hover {
+    background-color: #F54E0F;
+    transition: all .5s ease-in-out;
+}
+
+
+
+
 .col{
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 1rem;
 }
 .buttonCenter{
     display: flex;
@@ -26,34 +47,55 @@
 }
 
 .register-form-container button {
-    background-color: #f0f0f0; 
+  
+    background: var(--darkGrayishBlue400);
+  
+    /* background-color: #F5E00F;  */
     color: #333; 
-    border: none;
+    border: 1px solid black;
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
     margin-bottom: 10px;
     margin-right: 10px;
+    transition: all .5s ease-in-out;
 }
 
 .register-form-container button:hover {
-    background-color: #e0e0e0; 
+
+    background-color: #FFDE00; 
+    /* border: 1px solid var(--blue500);
+    color: var(--blue500); */
+
+    /* background-color:#F3E20F;  */
+    transition: all .5s ease-in-out;
 }
 
-.register-form-container button.cancel {
+/* .register-form-container button.cancel {
    
     color: #333; 
-}
+} */
 
 .register-form-container button.delete {
-    background-color: #e43b49;
-    color: #fffffd; 
+    /* background-color: #F5A80F; */
+    border: 1px solid black;
+    color: #141413; 
+    transition: all .5s ease-in-out;
+}
+.register-form-container button.delete:hover {
+    background-color: #F54E0F;
+    
+    /* color: #fffffd; */
+    transition: all .5s ease-in-out;
+    /* border:  solid  black ; */
+    /* box-sizing: content-box; */
 }
 
 .register-form-container form {
     display: flex;
     /* flex-wrap: wrap; */
     gap: 20px;
+    justify-content: center;
 }
 
 .register-form-container form input {
@@ -64,10 +106,12 @@
     border-radius: 4px;
     background-color: #ffffff; 
     color: #333; 
+    width: 100%;
 }
 
 .register-form-container form input[type="date"] {
-    padding: 8px 10px;
+    width: 100%;
+    padding: 10px;
 }
 
 .register-form-container form button[type="submit"] {
@@ -111,4 +155,12 @@
 
 .search-bar-container button:hover {
     background-color: #fdd835; 
+}
+/* '''''''''''''''''''''''' */
+
+.inputLabels {
+    margin-bottom: 3px;
+    /* border: 1px solid red; */
+    display: block;
+    /* color: red; */
 }

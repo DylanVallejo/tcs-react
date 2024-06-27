@@ -142,7 +142,7 @@ export const BankList = ({ searchItem = "" }) => {
                 :
                 <>
                     {searchItem && <p>Mostrando resultados para: <b>{searchItem}</b></p>}
-                    <button onClick={cleanSearch}>Eliminar Filtro</button>
+                    <button className='cleanFilter-btn' onClick={cleanSearch}>Eliminar Filtro</button>
                 </>
             }
             <table>
